@@ -5,6 +5,10 @@ import psutil
 
 app = Flask(__name__)
 
+@app.route("/version")   
+def index():
+    return ("Version 0.0.1")
+
 @app.route("/")   
 def main():
     return ("Main page !")
@@ -14,6 +18,7 @@ def show_cpu():
     return jsonify(
             {'CPUs statistics' : psutil.cpu_stats()},
         )
+
     # cpu = [
     #     {'CPUs count:' : psutil.cpu_count()},
     #     {'CPUs statistics' : psutil.cpu_stats()},
