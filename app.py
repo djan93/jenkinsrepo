@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/version")   
 def index():
-    return ("Version 0.0.1")
+    return ("Version 0.0.2")
 
 @app.route("/")   
 def main():
