@@ -21,3 +21,15 @@ spec:
         - containerPort: 4000
       imagePullSecrets:
       - name: abrakadabra
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 4000
+  selector:
+    app: app
