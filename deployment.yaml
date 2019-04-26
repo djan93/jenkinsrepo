@@ -19,3 +19,5 @@ spec:
         image: devcamp.azurecr.io/myapp:latest
         ports:
         - containerPort: 4000
+      imagePullSecrets:
+      - name: abrakadabra
